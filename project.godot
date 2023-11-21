@@ -10,11 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Stelar"
-run/main_scene="res://src/world.tscn"
+config/name="Menu"
+run/main_scene="res://src/menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
-[rendering]
+[input]
 
-textures/canvas_textures/default_texture_filter=0
+left={
+"deadzone": 0.5,
+"events": []
+}
