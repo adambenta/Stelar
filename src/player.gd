@@ -9,23 +9,26 @@ var is_left = 1
 var max_jump = 1
 
 @onready var ap = $AnimationPlayer
-@onready var sprite = $Sprite2D 
+@onready var sprite = $Sprite2D
+@onready var input_menu = $GUI/InputSettings
+
+var open_option = false
 
 func _physics_process(delta):
 	if !is_on_floor():
 		velocity.y += gravity
 		if velocity.y > 800:
 			velocity.y = 800
-		if Input.is_action_just_pressed("ui_up"):
+		if Input.is_action_just_pressed("jump"):
 			if max_jump == 1:
 				velocity.y = double_jump_power
 				max_jump = 0
 
-	elif Input.is_action_just_pressed("ui_up"):
+	elif Input.is_action_just_pressed("jump"):
 		ap.play("jump")
 		velocity.y = jump_power
 
-	var horizontal_direction = Input.get_axis("ui_left", "ui_right")
+	var horizontal_direction = Input.get_axis("move_left", "move_right")
 	velocity.x = speed * horizontal_direction
 	
 	if horizontal_direction == -1 && is_left != 0:
@@ -53,3 +56,12 @@ func update_animation(horizontal_direction):
 			
 func switch_dir(horizontal_direction):
 	sprite.flip_h = (horizontal_direction == -1)
+
+func _unhandled_input(event):
+	if Input.is_action_pressed("ui_cancel"):
+		open_option = !open_option
+		if open_option:
+			input_menu.visible = true
+		else:
+			input_menu.visible = false
+		get_tree().root.get_viewport().set_input_as_handled()

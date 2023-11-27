@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlafq1bfqx2jn"]
+[gd_scene load_steps=4 format=3 uid="uid://dlafq1bfqx2jn"]
 
-[ext_resource type="Script" path="res://src/menu.gd" id="1_iv041"]
+[ext_resource type="Script" path="res://src/menu/menu.gd" id="1_l0vtc"]
+[ext_resource type="FontFile" uid="uid://dy8kyrqh17c3v" path="res://asset/fonts/Cave-Story.ttf" id="2_g0hfp"]
+[ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="2_qsk6r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -9,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_iv041")
+script = ExtResource("1_l0vtc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -23,15 +25,26 @@ grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_g0hfp")
+theme_override_font_sizes/font_size = 50
 text = "Start"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_g0hfp")
+theme_override_font_sizes/font_size = 50
 text = "Options"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_g0hfp")
+theme_override_font_sizes/font_size = 50
 text = "Quit"
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="InputSettings" parent="GUI" instance=ExtResource("2_qsk6r")]
+visible = false
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
