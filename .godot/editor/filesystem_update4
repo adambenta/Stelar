@@ -1,0 +1,7 @@
+res://src/world.tscn
+res://src/defult_tilemap.tres
+res://src/tile_map.tscn
+res://src/node_2d.tscn
+res://src/spike.gd
+res://src/spike.tscn
+res://src/player.gd

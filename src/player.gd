@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-
 const speed = 300.0
 const jump_power = -500.0
 const double_jump_power = -700
 const gravity = 30
 var is_left = 1
 var max_jump = 1
+var is_dying = false
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
@@ -15,6 +15,8 @@ var max_jump = 1
 var open_option = false
 
 func _physics_process(delta):
+	if is_dying:
+		return
 	if !is_on_floor():
 		velocity.y += gravity
 		if velocity.y > 800:
@@ -46,6 +48,8 @@ func _physics_process(delta):
 	update_animation(horizontal_direction)
 	
 func update_animation(horizontal_direction):
+	if is_dying:
+		return
 	if is_on_floor():
 		if horizontal_direction == 0:
 			ap.play("idle")
@@ -56,6 +60,14 @@ func update_animation(horizontal_direction):
 			
 func switch_dir(horizontal_direction):
 	sprite.flip_h = (horizontal_direction == -1)
+
+func death():
+	ap.play("Death")
+	is_dying = true
+	await get_tree().create_timer(1).timeout
+	is_dying = false
+	position.x = 0
+	position.y = 0
 
 func _unhandled_input(event):
 	if Input.is_action_pressed("ui_cancel"):
