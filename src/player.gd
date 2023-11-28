@@ -10,9 +10,6 @@ var is_dying = false
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
-@onready var input_menu = $GUI/InputSettings
-
-var open_option = false
 
 func _physics_process(delta):
 	if is_dying:
@@ -68,12 +65,3 @@ func death():
 	is_dying = false
 	position.x = 0
 	position.y = 0
-
-func _unhandled_input(event):
-	if Input.is_action_pressed("ui_cancel"):
-		open_option = !open_option
-		if open_option:
-			input_menu.visible = true
-		else:
-			input_menu.visible = false
-		get_tree().root.get_viewport().set_input_as_handled()
