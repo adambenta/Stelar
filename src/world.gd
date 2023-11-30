@@ -1,17 +1,18 @@
 extends Node2D
 
-@onready var input_menu = $GUI/InputSettings
+var level_parameters := {
+	"input_menu": null
+}
+
 var open_option = false
 
 signal level_changed(level_name)
 
 @export var level_name: String = "level"
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
@@ -19,7 +20,11 @@ func _unhandled_input(event):
 	if Input.is_action_pressed("ui_cancel"):
 		open_option = !open_option
 		if open_option:
-			input_menu.visible = true
+			level_parameters.input_menu.visible = true
 		else:
-			input_menu.visible = false
+			level_parameters.input_menu.visible = false
 		get_tree().root.get_viewport().set_input_as_handled()
+
+func load_level_parameters(new_level_parameters: Dictionary):
+	level_parameters = new_level_parameters
+	get_tree().root.get_viewport().set_input_as_handled()
