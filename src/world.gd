@@ -3,10 +3,13 @@ extends Node2D
 @onready var input_menu = $GUI/InputSettings
 var open_option = false
 
+signal level_changed(level_name)
+
+@export var level_name: String = "level"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

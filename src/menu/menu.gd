@@ -4,6 +4,10 @@ extends Control
 
 var open_option = false
 
+signal level_changed(level_name)
+
+@export var level_name: String = "menu"
+
 func _ready():
 	pass
 
@@ -11,7 +15,8 @@ func _process(delta):
 	pass
 
 func _on_start_button_pressed():
-	get_tree().change_scene_to_file("res://src/HowToMoove.tscn")
+	emit_signal("level_changed", level_name)
+	get_tree().change_scene_to_file("res://src/SceneSwitcher.tscn")
 
 func _on_options_button_pressed():
 	open_option = !open_option
@@ -32,3 +37,6 @@ func _unhandled_input(event):
 		else:
 			input_menu.visible = false
 		get_tree().root.get_viewport().set_input_as_handled()
+
+func _transfer_data_between_scenes(old_scene, new_scene):
+	new_scene.input_menu = old_scene.input_menu 
