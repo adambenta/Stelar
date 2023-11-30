@@ -6,7 +6,7 @@ var open_option = false
 
 signal level_changed(level_name)
 
-@export var level_name: String = "menu"
+@export var level_name: String = "level"
 
 func _ready():
 	pass
@@ -16,7 +16,6 @@ func _process(delta):
 
 func _on_start_button_pressed():
 	emit_signal("level_changed", level_name)
-	get_tree().change_scene_to_file("res://src/SceneSwitcher.tscn")
 
 func _on_options_button_pressed():
 	open_option = !open_option

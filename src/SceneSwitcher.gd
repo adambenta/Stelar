@@ -10,7 +10,7 @@ func handle_level_changed(current_level_name: String):
 	var next_level_name: String
 
 	match current_level_name:
-		"menu":
+		"Menu":
 			next_level_name = "HowToMoove"
 		"HowToMoove":
 			next_level_name = "HowToMoove"
