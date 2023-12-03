@@ -1,34 +1,64 @@
 extends CharacterBody2D
 
 const speed = 300.0
+const dash_speed = 1500.0
+const dash_speed_vertical = 1500.0
 const jump_power = -500.0
 const double_jump_power = -700
 const gravity = 30
+const wall_slide_gravity = 0
 var is_left = 1
 var max_jump = 1
 var is_dying = false
+var wall_jump_power = 10000
+var wall_slide_var = false
+var can_dash = true
+var is_dashing = false
+var cancel_dash = false
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var dash_timer = $Timer
 
 func _physics_process(delta):
 	if is_dying:
 		return
 	if !is_on_floor():
-		velocity.y += gravity
-		if velocity.y > 800:
-			velocity.y = 800
-		if Input.is_action_just_pressed("jump"):
+		if wall_slide_var:
+			wall_gravity()
+		else:
+			velocity.y += gravity
+		if velocity.y > 1500:
+			velocity.y = 1500
+		if !wall_slide_var and Input.is_action_just_pressed("jump"):
 			if max_jump == 1:
 				velocity.y = double_jump_power
+				ap.play("double_jump")
 				max_jump = 0
+		if is_on_wall() and Input.is_action_just_pressed("move_left"):
+			velocity.y = jump_power
+			velocity.x = -400
+		if is_on_wall() and Input.is_action_just_pressed("move_right"):
+			velocity.y = jump_power
+			velocity.x = 400
 
 	elif Input.is_action_just_pressed("jump"):
 		ap.play("jump")
 		velocity.y = jump_power
 
 	var horizontal_direction = Input.get_axis("move_left", "move_right")
-	velocity.x = speed * horizontal_direction
+	var vertical_direction = Input.get_axis("jump", "down")
+	if Input.is_action_just_pressed("dash") and can_dash:
+		is_dashing = true
+		can_dash = false
+		dash_timer.start()
+	if is_dashing:
+		dash(horizontal_direction, vertical_direction)
+	else:
+		velocity.x = speed * horizontal_direction
+	if cancel_dash:
+		cancel_dash = false
+		velocity.y = 0
 	
 	if horizontal_direction == -1 && is_left != 0:
 		sprite.position.x -= 45
@@ -40,9 +70,9 @@ func _physics_process(delta):
 	if horizontal_direction != 0:
 		switch_dir(horizontal_direction)
 
-	velocity.x = speed * horizontal_direction
 	move_and_slide()
 	update_animation(horizontal_direction)
+	wall_slide(delta)
 	
 func update_animation(horizontal_direction):
 	if is_dying:
@@ -51,10 +81,12 @@ func update_animation(horizontal_direction):
 		if horizontal_direction == 0:
 			ap.play("idle")
 			max_jump = 1
+			can_dash = true
 		else:
 			ap.play("run")
 			max_jump = 1
-			
+			can_dash = true
+
 func switch_dir(horizontal_direction):
 	sprite.flip_h = (horizontal_direction == -1)
 
@@ -65,3 +97,30 @@ func death():
 	is_dying = false
 	position.x = 0
 	position.y = 0
+
+func wall_slide(delta):
+	if is_on_wall() and !is_on_floor():
+		if Input.is_action_pressed("grab"):
+			max_jump = 1
+			wall_slide_var = true
+		else:
+			wall_slide_var = false
+	else:
+		wall_slide_var = false
+
+func wall_gravity():
+	velocity.y = 0
+	if Input.is_action_pressed("jump"):
+		position.y -= 4
+	if Input.is_action_pressed("down"):
+		position.y -= -4
+
+func dash(horizontal_direction, vertical_direction):
+	velocity.x = horizontal_direction * dash_speed
+	velocity.y = vertical_direction * dash_speed
+
+
+func _on_timer_timeout():
+	is_dashing = false
+	dash_timer.stop()
+	cancel_dash = true
