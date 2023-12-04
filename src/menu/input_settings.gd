@@ -57,4 +57,5 @@ func _process(delta):
 	pass
 
 func _on_default_button_pressed():
+	InputMap.load_from_project_settings()
 	_create_action_list()
