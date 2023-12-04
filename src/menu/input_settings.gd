@@ -7,27 +7,19 @@ var is_remapping = false
 var action_to_remap = null
 var remapping_button = null
 
-var input_actions = {
-	"move_left": "MOVE LEFT",
-	"move_right": "MOVE RIGHT",
-	"jump": "JUMP",
-	"dash": "DASH",
-}
-
 func _ready():
 	_create_action_list()
 
 func _create_action_list():
-	InputMap.load_from_project_settings()
 	for item in action_list.get_children():
 		item.queue_free()
 	
-	for action in input_actions:
+	for action in GlobalInput.input_actions:
 		var button = input_button_scene.instantiate()
 		var action_label = button.find_child("LabelAction")
 		var input_label = button.find_child("LabelInput")
 		
-		action_label.text = input_actions[action]
+		action_label.text = GlobalInput.input_actions[action]
 		
 		var events = InputMap.action_get_events(action)
 		if events.size() > 0:
@@ -63,7 +55,6 @@ func _update_action_list(button, event):
 
 func _process(delta):
 	pass
-
 
 func _on_default_button_pressed():
 	_create_action_list()
