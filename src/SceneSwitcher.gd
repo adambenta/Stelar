@@ -21,12 +21,11 @@ func handle_level_changed(current_level_name: String):
 			next_level_name = "HowToMoove"
 		_:
 			return
-	var next_level = load("res://src/levels/" + next_level_name + ".tscn").instantiate() 
+	var next_level = load("res://src/levels/" + next_level_name + ".tscn").instantiate()
 	add_child(next_level)
-	level_parameters.input_menu = current_level.level_parameters.input_menu.duplicate()
 	transfer_data_between_scenes(next_level)
 	current_level.queue_free()
 	current_level = next_level
 
 func transfer_data_between_scenes(new_scene):
-	new_scene.load_level_parameters(level_parameters)
+	new_scene.load_level_parameters()

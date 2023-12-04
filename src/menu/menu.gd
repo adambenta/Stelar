@@ -39,6 +39,5 @@ func _unhandled_input(event):
 			level_parameters.input_menu.visible = false
 		get_tree().root.get_viewport().set_input_as_handled()
 
-func load_level_parameters(new_level_parameters: Dictionary):
-	level_parameters = new_level_parameters
+func load_level_parameters():
 	get_tree().root.get_viewport().set_input_as_handled()
