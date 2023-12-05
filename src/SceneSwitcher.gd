@@ -18,6 +18,8 @@ func handle_level_changed(current_level_name: String):
 		"Menu":
 			next_level_name = "HowToMoove"
 		"HowToMoove":
+			next_level_name = "Level2"
+		"Level2":
 			next_level_name = "HowToMoove"
 		_:
 			return
