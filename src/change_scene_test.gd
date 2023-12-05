@@ -10,13 +10,11 @@ func _ready():
 func _process(delta):
 	if entered == true:
 		if Input.is_action_just_pressed("ui_accept"):
-			var world = get_node("/root/world")
-			if world:
-				var current_level_name = world.level_name
-				print("Signal emitted with level name:", current_level_name)
-				emit_signal("level_changed", current_level_name)
+			var temp_world = get_parent()
+			if temp_world:
+				temp_world.change_lvl()
 			else:
-				print("Error: World node not found")
+				print("Error: world node not found")
 
 func _on_body_entered(body: PhysicsBody2D):
 	entered = true

@@ -27,3 +27,6 @@ func _unhandled_input(event):
 
 func load_level_parameters():
 	get_tree().root.get_viewport().set_input_as_handled()
+
+func change_lvl():
+	emit_signal("level_changed", level_name)

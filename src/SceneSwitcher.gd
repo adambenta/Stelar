@@ -28,6 +28,7 @@ func handle_level_changed(current_level_name: String):
 	transfer_data_between_scenes(next_level)
 	current_level.queue_free()
 	current_level = next_level
+	current_level.level_changed.connect(handle_level_changed)
 
 func transfer_data_between_scenes(new_scene):
 	new_scene.load_level_parameters()

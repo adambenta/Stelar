@@ -339,6 +339,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q1vfb"]
+size = Vector2(67, 120)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_mpju5")
@@ -375,7 +376,7 @@ script = ExtResource("8_1utbl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 modulate = Color(0.207843, 1, 1, 1)
-position = Vector2(521, 820)
+position = Vector2(1882.5, 148)
 shape = SubResource("RectangleShape2D_q1vfb")
 
 [node name="GUI" type="CanvasLayer" parent="."]
