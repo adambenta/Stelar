@@ -287,7 +287,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_bh3kt"]
 radius = 32.9848
 
-[node name="world" type="Node2D"]
+[node name="world2" type="Node2D"]
 script = ExtResource("1_gvlhb")
 level_name = "debug"
 
