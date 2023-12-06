@@ -18,9 +18,15 @@ func handle_level_changed(current_level_name: String):
 		"Menu":
 			next_level_name = "HowToMoove"
 		"HowToMoove":
+			next_level_name = "Level1"
+		"Level1":
 			next_level_name = "Level2"
 		"Level2":
-			next_level_name = "HowToMoove"
+			next_level_name = "Level3"
+		"Level3":
+			next_level_name = "WIN"
+		"WIN":
+			next_level_name = "Menu"
 		_:
 			return
 	var next_level = load("res://src/levels/" + next_level_name + ".tscn").instantiate()

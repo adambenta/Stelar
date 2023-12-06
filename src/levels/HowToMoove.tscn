@@ -376,7 +376,7 @@ script = ExtResource("8_1utbl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 modulate = Color(0.207843, 1, 1, 1)
-position = Vector2(1882.5, 148)
+position = Vector2(1921, 150)
 shape = SubResource("RectangleShape2D_q1vfb")
 
 [node name="GUI" type="CanvasLayer" parent="."]
