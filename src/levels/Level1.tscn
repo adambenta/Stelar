@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dknqyvn6obqey"]
+[gd_scene load_steps=22 format=3 uid="uid://dknqyvn6obqey"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_t8muw"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_47fgf"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://src/change_scene_test.gd" id="9_md35h"]
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="10_atoa7"]
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="11_6c8xn"]
+[ext_resource type="Texture2D" uid="uid://dv77jvxgfks32" path="res://asset/cave_bg.png" id="12_xqw5g"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
 radius = 26.0
@@ -435,6 +436,16 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 1931.0
+offset_bottom = 1087.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(969, 537)
+scale = Vector2(1.5707, 1.56806)
+texture = ExtResource("12_xqw5g")
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

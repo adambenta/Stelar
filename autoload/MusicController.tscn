@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsfob2xmsrkgd"]
+
+[ext_resource type="Script" path="res://autoload/MusicController.gd" id="1_13yoc"]
+[ext_resource type="AudioStream" uid="uid://b7hbfta86mvcy" path="res://asset/New Super Mario Bros. Wii Tower Theme.mp3" id="2_esyyf"]
+
+[node name="MusicController" type="Node"]
+script = ExtResource("1_13yoc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_esyyf")
+volume_db = -20.0
