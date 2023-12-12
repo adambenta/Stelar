@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701615446
+::res://::1702338480
 icon.svg::CompressedTexture2D::1954395418270274232::1701603615::1701603615::1::::<><>::
 ::res://asset/::1701603615
 16-bit-spike-Sheet.png::CompressedTexture2D::5110516858954955256::1701603615::1701603615::1::::<><>::
@@ -58,19 +58,32 @@ CloudsFront.png::CompressedTexture2D::8020183668490627960::1701603615::170160361
 Tileset.png::CompressedTexture2D::2255685475175986322::1701603615::1701603615::1::::<><>::
 TilesExamples.png::CompressedTexture2D::189840180115756379::1701603615::1701603615::1::::<><>::
 Trees.png::CompressedTexture2D::6785457307310639681::1701603615::1701603615::1::::<><>::
-::res://src/::1701615397
-change_scene_test.gd::GDScript::-1::1701603615::0::1::::<>Area2D<>::
-defult_tilemap.tres::TileSet::5536710274537410488::1701613483::0::1::::<><>::uid://7ew2su0kt035::::res://asset/texture/Foreground/Tileset.png
-HowToMoove.tscn::PackedScene::5223669108947099329::1701615397::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
-player.gd::GDScript::-1::1701615382::0::1::::<>CharacterBody2D<>::
+::res://src/::1702339183
+change_scene_test.gd::GDScript::-1::1701799049::0::1::::<>Area2D<>::
+defult_tilemap.tres::TileSet::5536710274537410488::1702338387::0::1::::<><>::uid://7ew2su0kt035::::res://asset/texture/Foreground/Tileset.png
+input.gd::GDScript::-1::1701794289::0::1::::<>Node<>::
+player.gd::GDScript::-1::1701623288::0::1::::<>CharacterBody2D<>::
+SceneSwitcher.gd::GDScript::-1::1702339181::0::1::::<>Node<>::
+SceneSwitcher.tscn::PackedScene::4763596149866330274::1702339183::0::1::::<><>::uid://dlafq1bfqx2jn::::res://src/menu/menu.tscn<>res://src/SceneSwitcher.gd
+scene_change_detecor.gd::GDScript::-1::1701794289::0::1::::<>Area2D<>::
 spike.gd::GDScript::-1::1701603615::0::1::::<>Node2D<>::
-spike.tscn::PackedScene::8422999762056434550::1701615397::0::1::::<><>::res://src/spike.gd<>uid://behyhj6y3pqk4::::res://asset/spike.png
-tile_map.tscn::PackedScene::9004964279659935878::1701615397::0::1::::<><>::uid://ck5a2rswh755u::::res://src/defult_tilemap.tres
-world.gd::GDScript::-1::1701603615::0::1::::<>Node2D<>::
-world.tscn::PackedScene::9107305660831478804::1701615397::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>res://src/change_scene_test.gd<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
-::res://src/menu/::1701603615
+spike.tscn::PackedScene::8422999762056434550::1702339183::0::1::::<><>::res://src/spike.gd<>uid://behyhj6y3pqk4::::res://asset/spike.png
+tile_map.tscn::PackedScene::9004964279659935878::1702339183::0::1::::<><>::uid://ck5a2rswh755u::::res://src/defult_tilemap.tres
+world.gd::GDScript::-1::1701799049::0::1::::<>Node2D<>::
+world.tscn::PackedScene::9107305660831478804::1702339183::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>res://src/change_scene_test.gd<>uid://dsafttidet6ys::::res://src/spike.tscn
+::res://src/levels/::1702339184
+HowToMoove.tscn::PackedScene::5223669108947099329::1702339183::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+Level1.tscn::PackedScene::7889002853700460264::1702339184::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+Level2.tscn::PackedScene::2714765712727201308::1702339183::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+Level3.tscn::PackedScene::4863146771196052281::1702339184::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+Level4.tscn::PackedScene::930588203957159124::1702339184::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+Level5.tscn::PackedScene::8436809097450662610::1702339184::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+Level6.tscn::PackedScene::1762089509280493623::1702339184::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+Level7.tscn::PackedScene::3402308039234070673::1702339330::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4::::res://asset/2 Punk/Punk_idle.png<>uid://bijf5d8qku17t::::res://asset/2 Punk/Punk_hurt.png<>uid://gkyhyy7hlkj6::::res://asset/2 Punk/Punk_doublejump.png<>uid://c64pu1sy6wcqf::::res://asset/2 Punk/Punk_jump.png<>uid://11xnrllis4ai::::res://asset/2 Punk/Punk_run.png<>uid://d1kcpfvk80gig::::res://src/tile_map.tscn<>res://src/change_scene_test.gd<>uid://dgm0ts8ofq3d7::::res://src/menu/input_settings.tscn<>uid://dsafttidet6ys::::res://src/spike.tscn
+WIN.tscn::PackedScene::3252394209845389554::1701825069::0::1::::<><>::res://src/world.gd<>res://src/player.gd<>uid://bs5w0lryn3hy4
+::res://src/menu/::1701794289
 input_button.tscn::PackedScene::6402282353693571363::1701603615::0::1::::<><>::uid://dy8kyrqh17c3v
-input_settings.gd::GDScript::-1::1701603615::0::1::::<>Control<>::
+input_settings.gd::GDScript::-1::1701794289::0::1::::<>Control<>::
 input_settings.tscn::PackedScene::7606720497901856710::1701603615::0::1::::<><>::uid://dy8kyrqh17c3v
-menu.gd::GDScript::-1::1701603615::0::1::::<>Control<>::
-menu.tscn::PackedScene::7931672856165372227::1701603615::0::1::::<><>::res://src/menu/menu.gd<>uid://dy8kyrqh17c3v
+menu.gd::GDScript::-1::1701794289::0::1::::<>Control<>::
+menu.tscn::PackedScene::7931672856165372227::1701794289::0::1::::<><>::res://src/menu/menu.gd<>uid://dy8kyrqh17c3v
