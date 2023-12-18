@@ -1,12 +1,6 @@
-res://src/moving_platform_right.tscn
 res://src/defult_tilemap.tres
-res://src/levels/Level6.tscn
-res://src/levels/Level7.tscn
-res://src/levels/Level8.tscn
-res://src/moving_platform_left.tscn
-res://src/levels/Level9.tscn
-res://src/spike.tscn
-res://src/levels/Level10.tscn
+res://src/forest_tile_set.tres
+res://src/levels/Level11.tscn
+res://src/SceneSwitcher.tscn
 res://src/SceneSwitcher.gd
-res://src/moving_platform_8.tscn
-res://src/moving_platform_8.2.tscn
+res://src/tile_map_forest.tscn
