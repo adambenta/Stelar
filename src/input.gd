@@ -5,4 +5,6 @@ var input_actions = {
 	"move_right": "MOVE RIGHT",
 	"jump": "JUMP",
 	"dash": "DASH",
+	"grab": "GRAB",
+	"down": "MOVE DOWN"
 }

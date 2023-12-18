@@ -57,6 +57,12 @@ layout_mode = 2
 [node name="InputButton4" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("1_i0lq6")]
 layout_mode = 2
 
+[node name="InputButton5" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("1_i0lq6")]
+layout_mode = 2
+
+[node name="InputButton6" parent="PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("1_i0lq6")]
+layout_mode = 2
+
 [node name="DefaultButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
