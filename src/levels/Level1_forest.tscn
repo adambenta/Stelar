@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="11_4ptxl"]
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="12_x8yvi"]
 [ext_resource type="Texture2D" uid="uid://bj4my5w73y4nn" path="res://asset/forest_bg.png" id="13_o1vbl"]
-[ext_resource type="Texture2D" uid="uid://bpoubt18mi7le" path="res://asset/Tree1.tres" id="14_2e8fl"]
-[ext_resource type="Texture2D" uid="uid://55i7spkqxl5n" path="res://asset/Tree2.tres" id="15_d4fl1"]
+[ext_resource type="Texture2D" path="res://asset/Tree1.tres" id="14_2e8fl"]
+[ext_resource type="Texture2D" path="res://asset/Tree2.tres" id="15_d4fl1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
 radius = 26.0
@@ -347,7 +347,7 @@ size = Vector2(67, 120)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_gsh22")
-level_name = "Level1_foorest"
+level_name = "Level1_forest"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
 script = ExtResource("2_mecaf")

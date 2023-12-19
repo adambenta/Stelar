@@ -16,6 +16,8 @@ var can_dash = true
 var is_dashing = false
 var cancel_dash = false
 
+var portal_id = 0
+
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
 @onready var dash_timer = $Timer
@@ -124,3 +126,15 @@ func _on_timer_timeout():
 	is_dashing = false
 	dash_timer.stop()
 	cancel_dash = true
+
+func teleport(area):
+	for portal in get_tree().get_nodes_in_group("portal"):
+		if portal != area:
+			if portal.id == area.id:
+				if !portal.loackPortal:
+					area.lockedPortal()
+					global_position = portal.global_position
+
+	if area.is_in_group("portal"):
+		if !area.lockPortal:
+			teleport(area)

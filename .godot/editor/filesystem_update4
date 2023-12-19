@@ -8,5 +8,5 @@ res://src/menu/input_settings.tscn
 res://src/levels/HowToMoove.tscn
 res://src/spike.tscn
 res://autoload/MusicController.tscn
-res://autoload/MusicController.gd
+res://src/levels/Level2_forest.tscn
 res://src/SceneSwitcher.gd
