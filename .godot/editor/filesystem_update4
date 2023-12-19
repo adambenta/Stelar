@@ -1,9 +1,9 @@
-res://src/menu/input_settings.tscn
+res://src/SceneSwitcher.tscn
 res://src/defult_tilemap.tres
 res://src/forest_tile_set.tres
-res://src/input.gd
+res://src/menu/menu.tscn
 res://src/levels/Level1_f.tscn
 res://src/tile_map_forest.tscn
-res://src/SceneSwitcher.tscn
+res://src/menu/input_settings.tscn
 res://src/levels/HowToMoove.tscn
-res://src/change_scene_test.gd
+res://src/menu/menu.gd

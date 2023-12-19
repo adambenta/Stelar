@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlafq1bfqx2jn"]
+[gd_scene load_steps=5 format=3 uid="uid://dlafq1bfqx2jn"]
 
 [ext_resource type="Script" path="res://src/menu/menu.gd" id="1_l0vtc"]
 [ext_resource type="FontFile" uid="uid://dy8kyrqh17c3v" path="res://asset/fonts/Cave-Story.ttf" id="2_g0hfp"]
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="2_qsk6r"]
+[ext_resource type="Texture2D" uid="uid://d3t2io5713pm" path="res://asset/parrallax.jpg" id="4_kncrc"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -19,9 +20,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -135.0
-offset_right = 173.0
-offset_bottom = -80.0
+offset_left = 873.0
+offset_top = -603.0
+offset_right = 1046.0
+offset_bottom = -475.0
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
@@ -46,6 +48,17 @@ text = "Quit"
 
 [node name="InputSettings" parent="GUI" instance=ExtResource("2_qsk6r")]
 visible = false
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="Layer1" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1920, 1920)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Layer1"]
+position = Vector2(958, 543.75)
+scale = Vector2(1.59667, 1.60667)
+texture = ExtResource("4_kncrc")
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
