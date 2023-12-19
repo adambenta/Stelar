@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://didfpllql4e25"
+path="res://.godot/imported/Y2meta.app - Legend of Zelda Kokiri Forest Music Extended (128 kbps).mp3-d3d659dbcccde760a28094d9908c5325.mp3str"
+
+[deps]
+
+source_file="res://asset/Y2meta.app - Legend of Zelda Kokiri Forest Music Extended (128 kbps).mp3"
+dest_files=["res://.godot/imported/Y2meta.app - Legend of Zelda Kokiri Forest Music Extended (128 kbps).mp3-d3d659dbcccde760a28094d9908c5325.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
