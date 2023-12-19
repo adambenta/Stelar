@@ -5,3 +5,5 @@ res://src/input.gd
 res://src/levels/Level1_f.tscn
 res://src/tile_map_forest.tscn
 res://src/SceneSwitcher.tscn
+res://src/levels/HowToMoove.tscn
+res://src/change_scene_test.gd
