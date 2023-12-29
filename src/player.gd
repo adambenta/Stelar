@@ -7,6 +7,7 @@ const jump_power = -500.0
 const double_jump_power = -700
 const gravity = 30
 const wall_slide_gravity = 0
+const cloud_jump_var = -600
 var is_left = 1
 var max_jump = 1
 var is_dying = false
@@ -99,6 +100,12 @@ func death():
 	is_dying = false
 	position.x = 0
 	position.y = 0
+
+func cloud_jump():
+	velocity.y = cloud_jump_var
+	max_jump = 1
+	can_dash = true
+	ap.play("jump")
 
 func wall_slide(delta):
 	if is_on_wall() and !is_on_floor():
