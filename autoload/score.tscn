@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dolf6t6yrvrum"]
+
+[ext_resource type="Script" path="res://autoload/Score.gd" id="1_56wsd"]
+
+[node name="Score" type="Node"]
+
+[node name="Score" type="Label" parent="."]
+offset_left = -5.0
+offset_top = -80.0
+offset_right = 1917.0
+offset_bottom = 998.0
+text = "lol
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_56wsd")
