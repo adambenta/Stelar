@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/menu/menu.gd" id="1_l0vtc"]
 [ext_resource type="FontFile" uid="uid://dy8kyrqh17c3v" path="res://asset/fonts/Cave-Story.ttf" id="2_g0hfp"]
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="2_qsk6r"]
-[ext_resource type="Texture2D" uid="uid://h6w4kd1lkf6a" path="res://asset/parrallax.jpg" id="4_kncrc"]
+[ext_resource type="Texture2D" uid="uid://ys8gexbtnu5m" path="res://asset/parrallax.jpg" id="4_kncrc"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

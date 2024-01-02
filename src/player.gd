@@ -24,6 +24,8 @@ var portal_id = 0
 @onready var dash_timer = $Timer
 
 func _physics_process(delta):
+	print(position)
+	print(self.sprite.position)
 	if is_dying:
 		return
 	if !is_on_floor():
@@ -98,8 +100,8 @@ func death():
 	is_dying = true
 	await get_tree().create_timer(1).timeout
 	is_dying = false
-	position.x = 0
-	position.y = 0
+	position.x = 84
+	position.y = 900
 
 func cloud_jump():
 	velocity.y = cloud_jump_var
@@ -138,10 +140,6 @@ func teleport(area):
 	for portal in get_tree().get_nodes_in_group("portal"):
 		if portal != area:
 			if portal.id == area.id:
-				if !portal.loackPortal:
+				if !portal.lockPortal:
 					area.lockedPortal()
-					global_position = portal.global_position
-
-	if area.is_in_group("portal"):
-		if !area.lockPortal:
-			teleport(area)
+					self.position = portal.position

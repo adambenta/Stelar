@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bit61on2wy5qo"]
+[gd_scene load_steps=4 format=3 uid="uid://bbd5057r7molp"]
 
 [ext_resource type="Script" path="res://src/portal.gd" id="1_3im87"]
+[ext_resource type="Texture2D" uid="uid://1jvrq1lt1ylj" path="res://asset/portalsSpriteSheet2.png" id="1_yw8to"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bie4k"]
 radius = 30.0
@@ -12,9 +13,11 @@ script = ExtResource("1_3im87")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(39.125, 58)
 scale = Vector2(2.50806, 2.41667)
+texture = ExtResource("1_yw8to")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(37, 56)
+position = Vector2(38, 57)
 shape = SubResource("CapsuleShape2D_bie4k")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
