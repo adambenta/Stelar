@@ -347,7 +347,7 @@ script = ExtResource("1_t8muw")
 level_name = "Level1"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(71, 789)
+position = Vector2(77, 802)
 script = ExtResource("2_47fgf")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
