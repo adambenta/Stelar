@@ -26,8 +26,6 @@ var start_pos = Vector2(position.x, position.y)
 @onready var dash_timer = $Timer
 
 func _physics_process(delta):
-	print(position)
-	print(self.sprite.position)
 	if is_dying:
 		return
 	if !is_on_floor():

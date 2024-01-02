@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bl16nprrl4qa7"]
+[gd_scene load_steps=27 format=3 uid="uid://bl16nprrl4qa7"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_b2eq1"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_q5k7p"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bpoubt18mi7le" path="res://asset/Tree1.tres" id="14_mk6ju"]
 [ext_resource type="Texture2D" uid="uid://55i7spkqxl5n" path="res://asset/Tree2.tres" id="15_g77v4"]
 [ext_resource type="PackedScene" uid="uid://bbd5057r7molp" path="res://src/portal.tscn" id="16_nqn4m"]
+[ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="17_gew6p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8chm"]
 radius = 26.0
@@ -650,6 +651,9 @@ position = Vector2(1267, 734)
 [node name="portal2" parent="." instance=ExtResource("16_nqn4m")]
 position = Vector2(1550, 605)
 rotation = 3.14159
+
+[node name="Cloud" parent="." instance=ExtResource("17_gew6p")]
+position = Vector2(479, 955)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

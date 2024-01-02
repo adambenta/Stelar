@@ -2,12 +2,10 @@ res://src/levels/Level2_forest.tscn
 res://src/forest_tile_set.tres
 res://src/defult_tilemap.tres
 res://asset/Tree2.tres
-res://src/SceneSwitcher.gd
 res://src/tile_map_forest.tscn
 res://src/SceneSwitcher.tscn
 res://src/menu/input_settings.tscn
 res://src/levels/Level1_forest.tscn
-<<<<<<< HEAD
 res://src/portal.tscn
 res://src/world.tscn
 res://src/spike.tscn
@@ -19,17 +17,6 @@ res://src/levels/Level1.tscn
 res://src/levels/Level2.tscn
 res://src/levels/Level1_f.tscn
 res://src/levels/Level2_space.tscn
-=======
-res://src/levels/Level1_space.tscn
-res://src/moving_platform_left.tscn
-res://src/moving_platform_right.tscn
-res://src/spike.tscn
-res://src/levels/Level2_space.tscn
-res://src/cloud.tscn
-res://src/levels/Level1.tscn
-res://src/levels/Level1_f.tscn
-res://src/levels/Level2.tscn
->>>>>>> refs/remotes/origin/main
 res://src/levels/Level3.tscn
 res://src/levels/Level4.tscn
 res://src/levels/Level4_forest.tscn
@@ -40,17 +27,6 @@ res://src/levels/Level7.tscn
 res://src/levels/Level8.tscn
 res://src/levels/Level9.tscn
 res://src/levels/Level10.tscn
-<<<<<<< HEAD
 res://src/levels/WIN.tscn
 res://src/SceneSwitcher.gd
 res://src/levels/Level7_forest.tscn
-=======
-res://src/barry.tscn
-res://src/barry.gd
-res://src/player.gd
-res://autoload/Global_value.gd
-res://Label.gd
-res://autoload/score.tscn
-res://src/levels/WIN.tscn
-res://autoload/Score.gd
->>>>>>> refs/remotes/origin/main
