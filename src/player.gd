@@ -16,6 +16,7 @@ var wall_slide_var = false
 var can_dash = true
 var is_dashing = false
 var cancel_dash = false
+var barry = 0
 
 var portal_id = 0
 var start_pos = Vector2(position.x, position.y)
@@ -131,6 +132,8 @@ func dash(horizontal_direction, vertical_direction):
 	velocity.x = horizontal_direction * dash_speed
 	velocity.y = vertical_direction * dash_speed
 
+func add_barry():
+	Global.score += 1
 
 func _on_timer_timeout():
 	is_dashing = false

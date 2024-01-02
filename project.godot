@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GlobalInput="*res://src/input.gd"
 MusicController="*res://autoload/MusicController.tscn"
+Global="*res://autoload/Global_value.gd"
 
 [display]
 
