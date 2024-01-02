@@ -44,6 +44,20 @@ func handle_level_changed(current_level_name: String):
 			next_level_name = "Level2_forest"
 		"Level2_forest":
 			next_level_name = "Level1_space"
+		"Level2_forest":
+			next_level_name = "Level3_forest"
+		"Level3_forest":
+			next_level_name = "Level4_forest"
+		"Level4_forest":
+			next_level_name = "Level5_forest"
+		"Level5_forest":
+			next_level_name = "Level6_forest"
+		"Level6_forest":
+			next_level_name = "Level7_forest"
+		"Level7_forest":
+			next_level_name = "Level8_forest"
+		"Level8_forest":
+			next_level_name = "Level1_space"
 		"Level1_space":
 			next_level_name = "Level2_space"
 		"Level2_space":
