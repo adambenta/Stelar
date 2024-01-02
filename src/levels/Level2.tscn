@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="11_egrde"]
 [ext_resource type="Texture2D" uid="uid://dv77jvxgfks32" path="res://asset/cave_bg.png" id="12_qbtxs"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oqjmq"]
 radius = 26.0
 height = 98.0
 
@@ -347,17 +347,17 @@ script = ExtResource("1_vuy3w")
 level_name = "Level2"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(41, 132)
 script = ExtResource("2_uqg1r")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(62.4532, 123.5)
+position = Vector2(23, -21)
 scale = Vector2(2.31055, 2.6875)
 texture = ExtResource("3_qiils")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(40.4532, 140.5)
-shape = SubResource("CapsuleShape2D_k4bpp")
+shape = SubResource("CapsuleShape2D_oqjmq")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
 autoplay = "idle"
@@ -482,11 +482,13 @@ offset_left = -40.0
 offset_top = -28.0
 offset_right = 1981.0
 offset_bottom = 1116.0
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
 position = Vector2(1012, 576.5)
 scale = Vector2(1.58438, 1.61806)
 texture = ExtResource("12_qbtxs")
+metadata/_edit_lock_ = true
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

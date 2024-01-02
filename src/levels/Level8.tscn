@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://l0k3mixxtqop" path="res://src/moving_platform_8.2.tscn" id="14_sqe8g"]
 [ext_resource type="PackedScene" uid="uid://bwgoq50nuqxvk" path="res://src/moving_platform_8.tscn" id="15_nfk3e"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v504s"]
 radius = 26.0
 height = 98.0
 
@@ -349,17 +349,17 @@ script = ExtResource("1_w4c3o")
 level_name = "Level8"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(102, 952)
 script = ExtResource("2_5mfci")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(81.9999, 924)
+position = Vector2(23, -21)
 scale = Vector2(2.31055, 2.6875)
 texture = ExtResource("3_vsffh")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(54, 945)
-shape = SubResource("CapsuleShape2D_k4bpp")
+shape = SubResource("CapsuleShape2D_v504s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
 autoplay = "idle"

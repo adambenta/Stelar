@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="10_0os5u"]
 [ext_resource type="Texture2D" uid="uid://dv77jvxgfks32" path="res://asset/cave_bg.png" id="12_5dwdw"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bxdl2"]
 radius = 26.0
 height = 98.0
 
@@ -347,17 +347,17 @@ script = ExtResource("1_mpju5")
 level_name = "HowToMoove"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(141, 795)
 script = ExtResource("2_espdv")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(240.453, 802.5)
+position = Vector2(23, -21)
 scale = Vector2(2.31055, 2.6875)
 texture = ExtResource("3_y4h2u")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(218.453, 819.5)
-shape = SubResource("CapsuleShape2D_k4bpp")
+shape = SubResource("CapsuleShape2D_bxdl2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
 autoplay = "idle"

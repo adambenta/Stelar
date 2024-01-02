@@ -16,7 +16,7 @@ func handle_level_changed(current_level_name: String):
 
 	match current_level_name:
 		"Menu":
-			next_level_name = "Level1_forest"
+			next_level_name = "HowToMoove"
 			MusicController.play_music_cave()
 		"HowToMoove":
 			next_level_name = "Level1"

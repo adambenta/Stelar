@@ -18,6 +18,7 @@ var is_dashing = false
 var cancel_dash = false
 
 var portal_id = 0
+var start_pos = Vector2(position.x, position.y)
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
@@ -100,8 +101,8 @@ func death():
 	is_dying = true
 	await get_tree().create_timer(1).timeout
 	is_dying = false
-	position.x = 84
-	position.y = 900
+	position.x = start_pos.x
+	position.y = start_pos.y
 
 func cloud_jump():
 	velocity.y = cloud_jump_var

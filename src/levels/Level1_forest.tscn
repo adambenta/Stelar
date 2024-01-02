@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://rogjlrvvht4v"]
+[gd_scene load_steps=25 format=3 uid="uid://rogjlrvvht4v"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_gsh22"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_mecaf"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bj4my5w73y4nn" path="res://asset/forest_bg.png" id="13_o1vbl"]
 [ext_resource type="Texture2D" uid="uid://bpoubt18mi7le" path="res://asset/Tree1.tres" id="14_2e8fl"]
 [ext_resource type="Texture2D" uid="uid://55i7spkqxl5n" path="res://asset/Tree2.tres" id="15_d4fl1"]
-[ext_resource type="PackedScene" uid="uid://bbd5057r7molp" path="res://src/portal.tscn" id="16_u1gf5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
 radius = 26.0
@@ -488,12 +487,6 @@ show_behind_parent = true
 position = Vector2(855, 515)
 scale = Vector2(4.52353, 4.13704)
 texture = ExtResource("15_d4fl1")
-
-[node name="portal" parent="." instance=ExtResource("16_u1gf5")]
-position = Vector2(297, 766)
-
-[node name="portal2" parent="." instance=ExtResource("16_u1gf5")]
-position = Vector2(1227, 540)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

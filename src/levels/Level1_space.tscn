@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bj4my5w73y4nn" path="res://asset/forest_bg.png" id="13_sovm3"]
 [ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="14_weiga"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1v6l"]
 radius = 26.0
 height = 98.0
 
@@ -349,17 +349,17 @@ script = ExtResource("1_ar57q")
 level_name = "Level1_space"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(71, 789)
 script = ExtResource("2_t3ipt")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(83, 821)
+position = Vector2(23, -21)
 scale = Vector2(2.31055, 2.6875)
 texture = ExtResource("3_ru0vb")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(57, 841)
-shape = SubResource("CapsuleShape2D_k4bpp")
+shape = SubResource("CapsuleShape2D_d1v6l")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
 autoplay = "idle"

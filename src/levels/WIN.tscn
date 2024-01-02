@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="10_sxbth"]
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="11_b7gqa"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4bpp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3uyl5"]
 radius = 26.0
 height = 98.0
 
@@ -346,17 +346,17 @@ script = ExtResource("1_48ebb")
 level_name = "WIN"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(86, 797)
 script = ExtResource("2_p8248")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(70.4532, 796.5)
+position = Vector2(23, -21)
 scale = Vector2(2.31055, 2.6875)
 texture = ExtResource("3_2i34x")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2(48.4532, 813.5)
-shape = SubResource("CapsuleShape2D_k4bpp")
+shape = SubResource("CapsuleShape2D_3uyl5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
 autoplay = "idle"

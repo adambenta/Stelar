@@ -16,9 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://bwgoq50nuqxvk" path="res://src/moving_platform_8.tscn" id="14_b0ohv"]
 [ext_resource type="PackedScene" uid="uid://bbd5057r7molp" path="res://src/portal.tscn" id="15_13cdd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1vfb"]
-size = Vector2(108.5, 120)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6qhvv"]
 radius = 26.0
 height = 98.0
@@ -345,9 +342,34 @@ _data = {
 "run": SubResource("Animation_cg0w3")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1vfb"]
+size = Vector2(108.5, 120)
+
 [node name="world" type="Node2D"]
 script = ExtResource("1_02jvh")
 level_name = "Level2_forest"
+
+[node name="player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(57, 931)
+script = ExtResource("2_57vam")
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+position = Vector2(23, -21)
+scale = Vector2(2.31055, 2.6875)
+texture = ExtResource("3_en4q0")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("CapsuleShape2D_6qhvv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_77qp0")
+}
+
+[node name="Timer" type="Timer" parent="player"]
+wait_time = 0.1
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("8_nrqdt")
@@ -610,28 +632,6 @@ position = Vector2(210, 656)
 [node name="Platform3" parent="." instance=ExtResource("14_b0ohv")]
 position = Vector2(217, 478)
 
-[node name="player" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(57, 931)
-script = ExtResource("2_57vam")
-
-[node name="Sprite2D" type="Sprite2D" parent="player"]
-position = Vector2(23, -21)
-scale = Vector2(2.31055, 2.6875)
-texture = ExtResource("3_en4q0")
-hframes = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-shape = SubResource("CapsuleShape2D_6qhvv")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
-autoplay = "idle"
-libraries = {
-"": SubResource("AnimationLibrary_77qp0")
-}
-
-[node name="Timer" type="Timer" parent="player"]
-wait_time = 0.1
-
 [node name="spike37" parent="." instance=ExtResource("10_a68vf")]
 position = Vector2(89, 841)
 rotation = 1.5708
@@ -864,6 +864,6 @@ position = Vector2(1003, 317)
 position = Vector2(1710, 873)
 rotation = -3.14159
 
+[connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
-[connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
