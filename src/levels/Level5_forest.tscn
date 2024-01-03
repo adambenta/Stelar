@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmhl6sxhysin8"]
+[gd_scene load_steps=22 format=3 uid="uid://c2ac477p4b02f"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_4g2i6"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_ydyfx"]
@@ -344,7 +344,7 @@ size = Vector2(138.75, 80)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_4g2i6")
-level_name = "Level2"
+level_name = "Level5_forest"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(133, 47)

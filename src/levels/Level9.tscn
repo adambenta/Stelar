@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://be35agtts71ps"]
+[gd_scene load_steps=25 format=3 uid="uid://be35agtts71ps"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_qmlpa"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_lfm6w"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cvb64ik43wgsq" path="res://asset/cave bc2.png" id="12_fkcqi"]
 [ext_resource type="PackedScene" uid="uid://b2syf0epb4fnr" path="res://src/moving_platform_left.tscn" id="13_o4xfu"]
 [ext_resource type="PackedScene" uid="uid://cqensngjod6hi" path="res://src/moving_platform_right.tscn" id="14_1tdk0"]
+[ext_resource type="PackedScene" uid="uid://da5lg4uwul5sg" path="res://src/barry.tscn" id="15_klpnt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rgvbs"]
 radius = 26.0
@@ -603,6 +604,9 @@ position = Vector2(303, 713)
 position = Vector2(1594, 255)
 
 [node name="Node2D" type="Node2D" parent="."]
+
+[node name="Area2D2" parent="." instance=ExtResource("15_klpnt")]
+position = Vector2(1209, 915)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

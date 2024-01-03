@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://duaf6575pda04"]
+[gd_scene load_steps=25 format=3 uid="uid://duaf6575pda04"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_w4c3o"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_5mfci"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="11_wgbmk"]
 [ext_resource type="Texture2D" uid="uid://cvb64ik43wgsq" path="res://asset/cave bc2.png" id="12_c7df8"]
 [ext_resource type="PackedScene" uid="uid://l0k3mixxtqop" path="res://src/moving_platform_8.2.tscn" id="14_sqe8g"]
+[ext_resource type="PackedScene" uid="uid://da5lg4uwul5sg" path="res://src/barry.tscn" id="15_032dr"]
 [ext_resource type="PackedScene" uid="uid://bwgoq50nuqxvk" path="res://src/moving_platform_8.tscn" id="15_nfk3e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v504s"]
@@ -540,6 +541,9 @@ position = Vector2(1161, 388)
 
 [node name="Platform3" parent="." instance=ExtResource("14_sqe8g")]
 position = Vector2(932, 603)
+
+[node name="Area2D2" parent="." instance=ExtResource("15_032dr")]
+position = Vector2(1798, 949)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

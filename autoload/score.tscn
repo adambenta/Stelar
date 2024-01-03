@@ -5,10 +5,10 @@
 [node name="Score" type="Node"]
 
 [node name="Score" type="Label" parent="."]
-offset_left = -5.0
-offset_top = -80.0
-offset_right = 1917.0
-offset_bottom = 998.0
+offset_left = -80.0
+offset_top = -3.0
+offset_right = 1842.0
+offset_bottom = 1075.0
 text = "lol
 "
 horizontal_alignment = 1

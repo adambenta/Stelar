@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bexb2avf6w6mi"]
+[gd_scene load_steps=23 format=3 uid="uid://bexb2avf6w6mi"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_vuy3w"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_uqg1r"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="10_5k13n"]
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="11_egrde"]
 [ext_resource type="Texture2D" uid="uid://dv77jvxgfks32" path="res://asset/cave_bg.png" id="12_qbtxs"]
+[ext_resource type="PackedScene" uid="uid://da5lg4uwul5sg" path="res://src/barry.tscn" id="13_25dof"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oqjmq"]
 radius = 26.0
@@ -489,6 +490,9 @@ position = Vector2(1012, 576.5)
 scale = Vector2(1.58438, 1.61806)
 texture = ExtResource("12_qbtxs")
 metadata/_edit_lock_ = true
+
+[node name="Area2D2" parent="." instance=ExtResource("13_25dof")]
+position = Vector2(1456, 677)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

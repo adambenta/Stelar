@@ -43,8 +43,6 @@ func handle_level_changed(current_level_name: String):
 		"Level1_forest":
 			next_level_name = "Level2_forest"
 		"Level2_forest":
-			next_level_name = "Level3_forest"
-		"Level3_forest":
 			next_level_name = "Level4_forest"
 		"Level4_forest":
 			next_level_name = "Level5_forest"
@@ -59,11 +57,18 @@ func handle_level_changed(current_level_name: String):
 		"Level9_forest":
 			next_level_name = "Level1_space"
 		"Level1_space":
-			next_level_name = "WIN"
+			next_level_name = "Level2_space"
+			MusicController.stop_music_cave()
+			MusicController.stop_music_forest()
+			MusicController.play_music_space()
 		"Level2_space":
-			next_level_name = "WIN"
-		"WIN":
-			next_level_name = "Menu"
+			next_level_name = "Level7_space"
+		"Level7_space":
+			next_level_name = "Level8_space"
+		"Level8_space":
+			next_level_name = "Level9_space"
+		"Level9_space":
+			next_level_name = "Space_Final"
 		_:
 			return
 	var next_level = load("res://src/levels/" + next_level_name + ".tscn").instantiate()

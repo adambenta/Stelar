@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://pwwss12mm1mo"]
+[gd_scene load_steps=25 format=3 uid="uid://bovqdch8mbk4u"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_pxmg5"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_g0m3d"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="12_mnwpx"]
 [ext_resource type="Texture2D" uid="uid://bwwn3yeiiockb" path="res://src/levels/background.jpg" id="13_ialif"]
 [ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="14_obdnr"]
+[ext_resource type="PackedScene" uid="uid://dolf6t6yrvrum" path="res://autoload/score.tscn" id="15_2xipb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frxld"]
 radius = 26.0
@@ -346,7 +347,7 @@ size = Vector2(1921.5, 120)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_pxmg5")
-level_name = "Level2_space"
+level_name = "Space_Final"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(847, 922)
@@ -576,12 +577,14 @@ offset_right = 1920.0
 offset_bottom = 1137.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
-position = Vector2(1019, 546)
+position = Vector2(1019, 553)
 scale = Vector2(3.55794, 3.15017)
 texture = ExtResource("13_ialif")
 
 [node name="Cloud4" parent="." instance=ExtResource("14_obdnr")]
 position = Vector2(846, 1013)
+
+[node name="Score" parent="." instance=ExtResource("15_2xipb")]
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

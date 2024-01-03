@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsfob2xmsrkgd"]
+[gd_scene load_steps=5 format=3 uid="uid://bsfob2xmsrkgd"]
 
 [ext_resource type="Script" path="res://autoload/MusicController.gd" id="1_13yoc"]
 [ext_resource type="AudioStream" uid="uid://b7hbfta86mvcy" path="res://asset/New Super Mario Bros. Wii Tower Theme.mp3" id="2_esyyf"]
 [ext_resource type="AudioStream" uid="uid://didfpllql4e25" path="res://asset/Y2meta.app - Legend of Zelda Kokiri Forest Music Extended (128 kbps).mp3" id="3_cwymw"]
+[ext_resource type="AudioStream" uid="uid://bo8f4ve4er3ak" path="res://asset/space_farewell.mp3" id="4_dxguf"]
 
 [node name="MusicController" type="Node"]
 script = ExtResource("1_13yoc")
@@ -13,4 +14,8 @@ volume_db = -20.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_cwymw")
+volume_db = -20.0
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dxguf")
 volume_db = -20.0

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/menu/menu.gd" id="1_l0vtc"]
 [ext_resource type="FontFile" uid="uid://dy8kyrqh17c3v" path="res://asset/fonts/Cave-Story.ttf" id="2_g0hfp"]
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="2_qsk6r"]
-[ext_resource type="Texture2D" uid="uid://ys8gexbtnu5m" path="res://asset/parrallax.jpg" id="4_kncrc"]
+[ext_resource type="Texture2D" uid="uid://sxmmony2t0xn" path="res://asset/Menu_Stelar.png" id="4_2i5aq"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -56,9 +56,9 @@ motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(1920, 1920)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Layer1"]
-position = Vector2(958, 543.75)
-scale = Vector2(1.59667, 1.60667)
-texture = ExtResource("4_kncrc")
+position = Vector2(964.5, 503.5)
+scale = Vector2(1.19938, 1.24476)
+texture = ExtResource("4_2i5aq")
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

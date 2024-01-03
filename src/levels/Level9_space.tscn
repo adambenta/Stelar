@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cu8ivctsyy5ks"]
+[gd_scene load_steps=25 format=3 uid="uid://8t1w3n4dugyw"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_k6r2f"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_168wx"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="12_v53xe"]
 [ext_resource type="Texture2D" uid="uid://xsock53k2smf" path="res://asset/space.png" id="13_krrf7"]
 [ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="14_updxp"]
+[ext_resource type="PackedScene" uid="uid://da5lg4uwul5sg" path="res://src/barry.tscn" id="15_0xw7p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frxld"]
 radius = 26.0
@@ -346,7 +347,7 @@ size = Vector2(1921.5, 120)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_k6r2f")
-level_name = "Level2_space"
+level_name = "Level9_space"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(403, 848)
@@ -375,6 +376,7 @@ visible = false
 
 [node name="TileMap_forest" parent="." instance=ExtResource("9_l8fjs")]
 layer_0/name = "platform"
+layer_0/tile_data = PackedInt32Array(3342374, 0, 3, 3407910, 0, 4, 3473446, 0, 5, 3342375, 65536, 3, 3407911, 65536, 4, 3473447, 65536, 5, 3342376, 131072, 3, 3407912, 131072, 4, 3473448, 131072, 5, 3342414, 0, 3, 3407950, 0, 4, 3473486, 0, 5, 3342415, 65536, 3, 3407951, 65536, 4, 3473487, 65536, 5, 3342416, 131072, 3, 3407952, 131072, 4, 3473488, 131072, 5, 1048620, 0, 3, 1114156, 0, 4, 1179692, 0, 5, 1048621, 65536, 3, 1114157, 65536, 4, 1179693, 65536, 5, 1048622, 131072, 3, 1114158, 131072, 4, 1179694, 131072, 5)
 layer_1/name = "décord"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
@@ -586,23 +588,23 @@ position = Vector2(1003, 535)
 scale = Vector2(2.01256, 2.41557)
 texture = ExtResource("13_krrf7")
 
-[node name="Cloud4" parent="." instance=ExtResource("14_updxp")]
-position = Vector2(954, 919)
-
 [node name="Cloud3" parent="." instance=ExtResource("14_updxp")]
-position = Vector2(1618, 503)
+position = Vector2(1718, 515)
 
 [node name="Cloud5" parent="." instance=ExtResource("14_updxp")]
-position = Vector2(1088, 455)
+position = Vector2(1000, 500)
 
 [node name="Cloud6" parent="." instance=ExtResource("14_updxp")]
-position = Vector2(497, 334)
+position = Vector2(438, 317)
 
 [node name="Cloud" parent="." instance=ExtResource("14_updxp")]
 position = Vector2(400, 923)
 
 [node name="Cloud2" parent="." instance=ExtResource("14_updxp")]
-position = Vector2(1507, 830)
+position = Vector2(1715, 767)
+
+[node name="Area2D2" parent="." instance=ExtResource("15_0xw7p")]
+position = Vector2(92, 322)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

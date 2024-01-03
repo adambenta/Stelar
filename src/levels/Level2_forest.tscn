@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://blw7b3vt1hk7l"]
+[gd_scene load_steps=26 format=3 uid="uid://blw7b3vt1hk7l"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_02jvh"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_57vam"]
@@ -10,11 +10,12 @@
 [ext_resource type="Script" path="res://src/change_scene_test.gd" id="8_nrqdt"]
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="9_ljap2"]
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="10_a68vf"]
-[ext_resource type="Texture2D" uid="uid://dub207am2h2cg" path="res://asset/FreeCuteTilesetv1/FreeCuteTileset/BG2.png" id="11_y1akg"]
+[ext_resource type="Texture2D" uid="uid://bj4my5w73y4nn" path="res://asset/forest_bg.png" id="11_vkap1"]
 [ext_resource type="PackedScene" uid="uid://djor7fclfqiqb" path="res://src/tile_map_forest.tscn" id="12_sdd3v"]
 [ext_resource type="Texture2D" uid="uid://c3w6qw88ajew4" path="res://asset/texture/Foreground/Trees.png" id="13_164hx"]
 [ext_resource type="PackedScene" uid="uid://bwgoq50nuqxvk" path="res://src/moving_platform_8.tscn" id="14_b0ohv"]
 [ext_resource type="PackedScene" uid="uid://bbd5057r7molp" path="res://src/portal.tscn" id="15_13cdd"]
+[ext_resource type="PackedScene" uid="uid://da5lg4uwul5sg" path="res://src/barry.tscn" id="16_bwu5u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6qhvv"]
 radius = 26.0
@@ -519,9 +520,9 @@ offset_bottom = 1119.0
 metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
-position = Vector2(976, 555)
-scale = Vector2(6.17187, 5.94792)
-texture = ExtResource("11_y1akg")
+position = Vector2(961, 555)
+scale = Vector2(1.74167, 1.95245)
+texture = ExtResource("11_vkap1")
 metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -863,6 +864,9 @@ position = Vector2(1003, 317)
 [node name="portal2" parent="." instance=ExtResource("15_13cdd")]
 position = Vector2(1710, 873)
 rotation = -3.14159
+
+[node name="Area2D2" parent="." instance=ExtResource("16_bwu5u")]
+position = Vector2(575, 769)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
