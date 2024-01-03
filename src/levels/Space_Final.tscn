@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cpft663kcmcrg"]
+[gd_scene load_steps=24 format=3 uid="uid://pwwss12mm1mo"]
 
 [ext_resource type="Script" path="res://src/world.gd" id="1_pxmg5"]
 [ext_resource type="Script" path="res://src/player.gd" id="2_g0m3d"]
@@ -12,7 +12,7 @@
 [ext_resource type="Script" path="res://src/change_scene_test.gd" id="10_vdib2"]
 [ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="11_rrer8"]
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="12_mnwpx"]
-[ext_resource type="Texture2D" uid="uid://nwnspuldbh5k" path="res://asset/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="13_4doog"]
+[ext_resource type="Texture2D" uid="uid://bwwn3yeiiockb" path="res://src/levels/background.jpg" id="13_ialif"]
 [ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="14_obdnr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frxld"]
@@ -349,7 +349,7 @@ script = ExtResource("1_pxmg5")
 level_name = "Level2_space"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
-position = Vector2(403, 848)
+position = Vector2(847, 922)
 script = ExtResource("2_g0m3d")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
@@ -372,9 +372,11 @@ wait_time = 0.1
 
 [node name="TileMap" parent="." instance=ExtResource("8_7vrvq")]
 visible = false
+layer_0/tile_data = PackedInt32Array(2949141, 393216, 2)
 
 [node name="TileMap_forest" parent="." instance=ExtResource("9_qptry")]
 layer_0/name = "platform"
+layer_0/tile_data = PackedInt32Array(1179734, 65536, 4, 1245270, 65536, 4, 1310806, 65536, 4, 1376342, 65536, 4, 1441878, 65536, 4, 1507414, 65536, 4, 1572950, 65536, 4, 1572951, 65536, 4, 1441880, 65536, 4, 1507416, 65536, 4, 1572952, 65536, 4, 1572953, 65536, 4, 1179738, 65536, 4, 1245274, 65536, 4, 1310810, 65536, 4, 1376346, 65536, 4, 1441882, 65536, 4, 1507418, 65536, 4, 1572954, 65536, 4, 1179740, 65536, 4, 1572956, 65536, 4, 1179741, 65536, 4, 1572957, 65536, 4, 1179742, 65536, 4, 1245278, 65536, 4, 1310814, 65536, 4, 1376350, 65536, 4, 1441886, 65536, 4, 1507422, 65536, 4, 1572958, 65536, 4, 1179743, 65536, 4, 1572959, 65536, 4, 1179744, 65536, 4, 1572960, 65536, 4, 1179746, 65536, 4, 1245282, 65536, 4, 1310818, 65536, 4, 1376354, 65536, 4, 1441890, 65536, 4, 1507426, 65536, 4, 1572962, 65536, 4, 1179747, 65536, 4, 1245283, 65536, 4, 1310820, 65536, 4, 1376356, 65536, 4, 1441893, 65536, 4, 1507429, 65536, 4, 1179750, 65536, 4, 1245286, 65536, 4, 1310822, 65536, 4, 1376358, 65536, 4, 1441894, 65536, 4, 1507430, 65536, 4, 1572966, 65536, 4)
 layer_1/name = "décord"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
@@ -512,14 +514,6 @@ scale = Vector2(2.7, 2.7)
 position = Vector2(1309, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike52" parent="." instance=ExtResource("12_mnwpx")]
-position = Vector2(-25, 0)
-scale = Vector2(2.7, 2.7)
-
-[node name="spike50" parent="." instance=ExtResource("12_mnwpx")]
-position = Vector2(-17, 0)
-scale = Vector2(2.7, 2.7)
-
 [node name="spike41" parent="." instance=ExtResource("12_mnwpx")]
 position = Vector2(1145, 1102)
 scale = Vector2(2.7, 2.7)
@@ -582,27 +576,12 @@ offset_right = 1920.0
 offset_bottom = 1137.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
-position = Vector2(969, 555)
-scale = Vector2(6.50625, 6.27083)
-texture = ExtResource("13_4doog")
+position = Vector2(1019, 546)
+scale = Vector2(3.55794, 3.15017)
+texture = ExtResource("13_ialif")
 
 [node name="Cloud4" parent="." instance=ExtResource("14_obdnr")]
-position = Vector2(954, 919)
-
-[node name="Cloud3" parent="." instance=ExtResource("14_obdnr")]
-position = Vector2(1618, 503)
-
-[node name="Cloud5" parent="." instance=ExtResource("14_obdnr")]
-position = Vector2(1088, 455)
-
-[node name="Cloud6" parent="." instance=ExtResource("14_obdnr")]
-position = Vector2(497, 334)
-
-[node name="Cloud" parent="." instance=ExtResource("14_obdnr")]
-position = Vector2(400, 923)
-
-[node name="Cloud2" parent="." instance=ExtResource("14_obdnr")]
-position = Vector2(1507, 830)
+position = Vector2(846, 1013)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

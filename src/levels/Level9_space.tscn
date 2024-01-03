@@ -1,19 +1,19 @@
-[gd_scene load_steps=24 format=3 uid="uid://cpft663kcmcrg"]
+[gd_scene load_steps=24 format=3 uid="uid://cu8ivctsyy5ks"]
 
-[ext_resource type="Script" path="res://src/world.gd" id="1_pxmg5"]
-[ext_resource type="Script" path="res://src/player.gd" id="2_g0m3d"]
-[ext_resource type="Texture2D" uid="uid://bs5w0lryn3hy4" path="res://asset/2 Punk/Punk_idle.png" id="3_sw64s"]
-[ext_resource type="Texture2D" uid="uid://bijf5d8qku17t" path="res://asset/2 Punk/Punk_hurt.png" id="4_b271d"]
-[ext_resource type="Texture2D" uid="uid://gkyhyy7hlkj6" path="res://asset/2 Punk/Punk_doublejump.png" id="5_q4ubq"]
-[ext_resource type="Texture2D" uid="uid://c64pu1sy6wcqf" path="res://asset/2 Punk/Punk_jump.png" id="6_32oh0"]
-[ext_resource type="Texture2D" uid="uid://11xnrllis4ai" path="res://asset/2 Punk/Punk_run.png" id="7_00nn4"]
-[ext_resource type="PackedScene" uid="uid://d1kcpfvk80gig" path="res://src/tile_map.tscn" id="8_7vrvq"]
-[ext_resource type="PackedScene" uid="uid://djor7fclfqiqb" path="res://src/tile_map_forest.tscn" id="9_qptry"]
-[ext_resource type="Script" path="res://src/change_scene_test.gd" id="10_vdib2"]
-[ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="11_rrer8"]
-[ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="12_mnwpx"]
-[ext_resource type="Texture2D" uid="uid://nwnspuldbh5k" path="res://asset/FreeCuteTilesetv1/FreeCuteTileset/BG1.png" id="13_4doog"]
-[ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="14_obdnr"]
+[ext_resource type="Script" path="res://src/world.gd" id="1_k6r2f"]
+[ext_resource type="Script" path="res://src/player.gd" id="2_168wx"]
+[ext_resource type="Texture2D" uid="uid://bs5w0lryn3hy4" path="res://asset/2 Punk/Punk_idle.png" id="3_fok7a"]
+[ext_resource type="Texture2D" uid="uid://bijf5d8qku17t" path="res://asset/2 Punk/Punk_hurt.png" id="4_ck1y8"]
+[ext_resource type="Texture2D" uid="uid://gkyhyy7hlkj6" path="res://asset/2 Punk/Punk_doublejump.png" id="5_ie7kx"]
+[ext_resource type="Texture2D" uid="uid://c64pu1sy6wcqf" path="res://asset/2 Punk/Punk_jump.png" id="6_j8404"]
+[ext_resource type="Texture2D" uid="uid://11xnrllis4ai" path="res://asset/2 Punk/Punk_run.png" id="7_ssjgp"]
+[ext_resource type="PackedScene" uid="uid://d1kcpfvk80gig" path="res://src/tile_map.tscn" id="8_jx8kx"]
+[ext_resource type="PackedScene" uid="uid://djor7fclfqiqb" path="res://src/tile_map_forest.tscn" id="9_l8fjs"]
+[ext_resource type="Script" path="res://src/change_scene_test.gd" id="10_q8e8i"]
+[ext_resource type="PackedScene" uid="uid://dgm0ts8ofq3d7" path="res://src/menu/input_settings.tscn" id="11_s1203"]
+[ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="12_v53xe"]
+[ext_resource type="Texture2D" uid="uid://xsock53k2smf" path="res://asset/space.png" id="13_krrf7"]
+[ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="14_updxp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_frxld"]
 radius = 26.0
@@ -31,7 +31,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_b271d")]
+"values": [ExtResource("4_ck1y8")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -82,7 +82,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_sw64s")]
+"values": [ExtResource("3_fok7a")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -134,7 +134,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("5_q4ubq")]
+"values": [ExtResource("5_ie7kx")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -187,7 +187,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_sw64s")]
+"values": [ExtResource("3_fok7a")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -275,7 +275,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("6_32oh0")]
+"values": [ExtResource("6_j8404")]
 }
 
 [sub_resource type="Animation" id="Animation_cg0w3"]
@@ -316,7 +316,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("7_00nn4")]
+"values": [ExtResource("7_ssjgp")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -345,17 +345,17 @@ _data = {
 size = Vector2(1921.5, 120)
 
 [node name="world" type="Node2D"]
-script = ExtResource("1_pxmg5")
+script = ExtResource("1_k6r2f")
 level_name = "Level2_space"
 
 [node name="player" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(403, 848)
-script = ExtResource("2_g0m3d")
+script = ExtResource("2_168wx")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
 position = Vector2(23, -21)
 scale = Vector2(2.31055, 2.6875)
-texture = ExtResource("3_sw64s")
+texture = ExtResource("3_fok7a")
 hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
@@ -370,10 +370,10 @@ libraries = {
 [node name="Timer" type="Timer" parent="player"]
 wait_time = 0.1
 
-[node name="TileMap" parent="." instance=ExtResource("8_7vrvq")]
+[node name="TileMap" parent="." instance=ExtResource("8_jx8kx")]
 visible = false
 
-[node name="TileMap_forest" parent="." instance=ExtResource("9_qptry")]
+[node name="TileMap_forest" parent="." instance=ExtResource("9_l8fjs")]
 layer_0/name = "platform"
 layer_1/name = "décord"
 layer_1/enabled = true
@@ -384,7 +384,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("10_vdib2")
+script = ExtResource("10_q8e8i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 modulate = Color(0.207843, 1, 1, 1)
@@ -393,178 +393,178 @@ shape = SubResource("RectangleShape2D_q1vfb")
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="InputSettings" parent="GUI" instance=ExtResource("11_rrer8")]
+[node name="InputSettings" parent="GUI" instance=ExtResource("11_s1203")]
 visible = false
 
-[node name="spike34" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike34" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1574, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike38" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike38" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(988, 1101)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike39" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike39" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1043, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike40" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike40" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1095, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike42" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike42" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(593, 1101)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike43" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike43" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(648, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike44" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike44" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(700, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike49" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike49" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(542, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike51" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike51" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(493, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike53" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike53" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(445, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike54" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike54" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(397, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike55" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike55" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(349, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike56" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike56" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(293, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike65" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike65" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(237, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike66" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike66" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(189, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike67" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike67" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(133, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike68" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike68" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(85, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike69" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike69" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(37, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike73" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike73" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(-27, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike74" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike74" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(-83, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike75" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike75" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(-139, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike57" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike57" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(749, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike58" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike58" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(797, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike59" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike59" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(853, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike60" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike60" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(901, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike61" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike61" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(941, 1100)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike62" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike62" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1197, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike63" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike63" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1245, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike64" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike64" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1309, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike52" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike52" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(-25, 0)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike50" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike50" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(-17, 0)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike41" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike41" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1145, 1102)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike35" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike35" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1622, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike36" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike36" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1670, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike37" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike37" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1726, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike70" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike70" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1782, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike71" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike71" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1846, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike72" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike72" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1910, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike76" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike76" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1974, 1105)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike45" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike45" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1374, 1106)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike46" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike46" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1422, 1106)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike47" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike47" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1470, 1106)
 scale = Vector2(2.7, 2.7)
 
-[node name="spike48" parent="." instance=ExtResource("12_mnwpx")]
+[node name="spike48" parent="." instance=ExtResource("12_v53xe")]
 position = Vector2(1526, 1106)
 scale = Vector2(2.7, 2.7)
 
@@ -582,26 +582,26 @@ offset_right = 1920.0
 offset_bottom = 1137.0
 
 [node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
-position = Vector2(969, 555)
-scale = Vector2(6.50625, 6.27083)
-texture = ExtResource("13_4doog")
+position = Vector2(1003, 535)
+scale = Vector2(2.01256, 2.41557)
+texture = ExtResource("13_krrf7")
 
-[node name="Cloud4" parent="." instance=ExtResource("14_obdnr")]
+[node name="Cloud4" parent="." instance=ExtResource("14_updxp")]
 position = Vector2(954, 919)
 
-[node name="Cloud3" parent="." instance=ExtResource("14_obdnr")]
+[node name="Cloud3" parent="." instance=ExtResource("14_updxp")]
 position = Vector2(1618, 503)
 
-[node name="Cloud5" parent="." instance=ExtResource("14_obdnr")]
+[node name="Cloud5" parent="." instance=ExtResource("14_updxp")]
 position = Vector2(1088, 455)
 
-[node name="Cloud6" parent="." instance=ExtResource("14_obdnr")]
+[node name="Cloud6" parent="." instance=ExtResource("14_updxp")]
 position = Vector2(497, 334)
 
-[node name="Cloud" parent="." instance=ExtResource("14_obdnr")]
+[node name="Cloud" parent="." instance=ExtResource("14_updxp")]
 position = Vector2(400, 923)
 
-[node name="Cloud2" parent="." instance=ExtResource("14_obdnr")]
+[node name="Cloud2" parent="." instance=ExtResource("14_updxp")]
 position = Vector2(1507, 830)
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]
