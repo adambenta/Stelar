@@ -145,3 +145,4 @@ func teleport(area):
 				if !portal.lockPortal:
 					area.lockedPortal()
 					self.position = portal.position
+					velocity.y = 0
