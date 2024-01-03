@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dsafttidet6ys" path="res://src/spike.tscn" id="12_gffh6"]
 [ext_resource type="Texture2D" uid="uid://bj4my5w73y4nn" path="res://asset/forest_bg.png" id="13_sovm3"]
 [ext_resource type="PackedScene" uid="uid://betjyqc8ag7re" path="res://src/cloud.tscn" id="14_weiga"]
-[ext_resource type="PackedScene" path="res://src/barry.tscn" id="15_oe2f3"]
+[ext_resource type="PackedScene" uid="uid://da5lg4uwul5sg" path="res://src/barry.tscn" id="15_oe2f3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1v6l"]
 radius = 26.0
